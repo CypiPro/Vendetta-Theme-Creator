@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI TEST</title>
+
+    <link rel="stylesheet" href="css/test.css">
+
+    <script src="js/test.js"></script>
+</head>
+<body>
+    <nav id="sidebar" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event)">
+        <fieldset>
+            <legend onclick="goto('description HEADER_PRIMARY')">Header Primary</legend>
+            <input type="color" class="HEADER_PRIMARY">
+            <input type="text" class="HEADER_PRIMARY" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description HEADER_PRIMARY')">Header Secondary</legend>
+            <input type="color" class="HEADER_SECONDARY">
+            <input type="text" class="HEADER_SECONDARY" value="#ffaaff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description TEXT_NORMAL')">Text Normal</legend>
+            <input type="color" class="TEXT_NORMAL">
+            <input type="text" class="TEXT_NORMAL" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description TEXT_MUTED')">Text Muted</legend>
+            <input type="color" class="TEXT_MUTED">
+            <input type="text" class="TEXT_MUTED" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description TEXT_LINK')">Text Link</legend>
+            <input type="color" class="TEXT_LINK">
+            <input type="text" class="TEXT_LINK" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description TEXT_DANGER')">Text Danger</legend>
+            <input type="color" class="TEXT_DANGER">
+            <input type="text" class="TEXT_DANGER" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description INTERACTIVE_NORMAL')">Interactive Normal</legend>
+            <input type="color" class="INTERACTIVE_NORMAL">
+            <input type="text" class="INTERACTIVE_NORMAL" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description INTERACTIVE_HOVER')">Interactive Hover</legend>
+            <input type="color" class="INTERACTIVE_HOVER">
+            <input type="text" class="INTERACTIVE_HOVER" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description INTERACTIVE_ACTIVE')">Interactive Active</legend>
+            <input type="color" class="INTERACTIVE_ACTIVE">
+            <input type="text" class="INTERACTIVE_ACTIVE" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description INTERACTIVE_MUTED')">Interactive Muted</legend>
+            <input type="color" class="INTERACTIVE_MUTED">
+            <input type="text" class="INTERACTIVE_MUTED" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_PRIMARY')">Background Primary</legend>
+            <input type="color" class="BACKGROUND_PRIMARY">
+            <input type="text" class="BACKGROUND_PRIMARY" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_SECONDARY')">Background Secondary</legend>
+            <input type="color" class="BACKGROUND_SECONDARY">
+            <input type="text" class="BACKGROUND_SECONDARY" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_SECONDARY_ALT')">Background Secondary Alt</legend>
+            <input type="color" class="BACKGROUND_SECONDARY_ALT">
+            <input type="text" class="BACKGROUND_SECONDARY_ALT" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_TERTIARY')">Background Tertiary</legend>
+            <input type="color" class="BACKGROUND_TERTIARY">
+            <input type="text" class="BACKGROUND_TERTIARY" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_ACCENT')">Background Accent</legend>
+            <input type="color" class="BACKGROUND_ACCENT">
+            <input type="text" class="BACKGROUND_ACCENT" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_FLOATING')">Background Floating</legend>
+            <input type="color" class="BACKGROUND_FLOATING">
+            <input type="text" class="BACKGROUND_FLOATING" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_MOBILE_PRIMARY')">Background Mobile Primary</legend>
+            <input type="color" class="BACKGROUND_MOBILE_PRIMARY">
+            <input type="text" class="BACKGROUND_MOBILE_PRIMARY" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_MOBILE_SECONDARY')">Background Mobile Secondary</legend>
+            <input type="color" class="BACKGROUND_MOBILE_SECONDARY">
+            <input type="text" class="BACKGROUND_MOBILE_SECONDARY" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_MESSAGE_HOVER')">Bacground Message Hover</legend>
+            <input type="color" class="BACKGROUND_MESSAGE_HOVER">
+            <input type="text" class="BACKGROUND_MESSAGE_HOVER" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_MODIFIER_HOVER')">Background Modifier Hover</legend>
+            <input type="color" class="BACKGROUND_MODIFIER_HOVER">
+            <input type="text" class="BACKGROUND_MODIFIER_HOVER" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_MODIFIER_ACTIVE')">Background Modifier Active</legend>
+            <input type="color" class="BACKGROUND_MODIFIER_ACTIVE">
+            <input type="text" class="BACKGROUND_MODIFIER_ACTIVE" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_MODIFIER_SELECTED')">Background Modifier Selected</legend>
+            <input type="color" class="BACKGROUND_MODIFIER_SELECTED">
+            <input type="text" class="BACKGROUND_MODIFIER_SELECTED" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_MODIFIER_ACCENT')">Background Modifier Accent</legend>
+            <input type="color" class="BACKGROUND_MODIFIER_ACCENT">
+            <input type="text" class="BACKGROUND_MODIFIER_ACCENT" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description SCROLLBAR_THIN_THUMB')">Scrollbar Thin Thumb</legend>
+            <input type="color" class="SCROLLBAR_THIN_THUMB">
+            <input type="text" class="SCROLLBAR_THIN_THUMB" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description SCROLLBAR_THIN_TRACK')">Scrollbar Thin Track</legend>
+            <input type="color" class="SCROLLBAR_THIN_TRACK">
+            <input type="text" class="SCROLLBAR_THIN_TRACK" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description SCROLLBAR_AUTO_THUMB')">Scrollbar Auto Thumb</legend>
+            <input type="color" class="SCROLLBAR_AUTO_THUMB">
+            <input type="text" class="SCROLLBAR_AUTO_THUMB" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description SCROLLBAR_AUTO_TRACK')">Scrollbar Auto Track</legend>
+            <input type="color" class="SCROLLBAR_AUTO_TRACK">
+            <input type="text" class="SCROLLBAR_AUTO_TRACK" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description CHANNEL_ICON')">Channel Icon</legend>
+            <input type="color" class="CHANNEL_ICON">
+            <input type="text" class="CHANNEL_ICON" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description CHAT_BACKGROUND')">Chat Background</legend>
+            <input type="color" class="CHAT_BACKGROUND">
+            <input type="text" class="CHAT_BACKGROUND" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description CHANNEL_TEXT_AREA_PLACEHOLDER')">Channel Text Area Placeholder</legend>
+            <input type="color" class="CHANNEL_TEXT_AREA_PLACEHOLDER">
+            <input type="text" class="CHANNEL_TEXT_AREA_PLACEHOLDER" value="#aaeeff">
+        </fieldset>
+        
+        <fieldset>
+            <legend onclick="goto('description SPOILER_HIDDEN_BACKGROUND')">Spoiler Hidden Background</legend>
+            <input type="color" class="SPOILER_HIDDEN_BACKGROUND">
+            <input type="text" class="SPOILER_HIDDEN_BACKGROUND" value="#aaeeff">
+        </fieldset>
+
+
+        <button onclick="openPopup()" id="export">Export</button>
+        <br>
+
+        <div id="variant">
+            <label>
+                <input type="radio" name="switch" onchange="updateVariant(this)" value="0" checked>
+                <span>Dark</span>
+            </label>
+            <label>
+                <input type="radio" name="switch" onchange="updateVariant(this)" value="1">
+                <span>Light</span>
+            </label>
+            <label>
+                <input type="radio" name="switch" onchange="updateVariant(this)" value="2">
+                <span>Oled</span>
+            </label>
+        </div>
+    </nav>
+
+    <div id="prev">
+        <div id="left">
+            <div>
+
+            </div>
+
+            <div id="channels">
+                <h1>AAAAAA</h1>
+
+                <h2>BBBBBBB</h2>
+                <p><b>#</b>aaaaa</p>
+                <p><b>#</b>aaaaaaaa</p>
+                <p><b>#</b>aaaa</p>
+                <p><b>#</b>aaaaa</p>
+                <p><b>#</b>aaaaaaaaaa</p>
+                <p><b>#</b>aaaaa</p>
+                <p><b>#</b>aaaaa</p>
+                <p><b>#</b>aaaaaaaaaa</p>
+                <p><b>#</b>aaaaaaa</p>
+                <p><b>#</b>aaaaaaaa</p>
+                <p><b>#</b>aaaaaaa</p>
+                <p><b>#</b>aaaaaaaa</p>
+                <p><b>#</b>aaaaaa</p>
+                <p><b>#</b>aaaaaaaaaa</p>
+            </div>
+        </div>
+
+        <div id="middle">
+            <div id="topbar">
+                <button id="leftButton">
+                    <svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+                        <title/>
+                        <line style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="152" y2="152" class="preview HEADER_PRIMARY"/>
+                        <line style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="256" y2="256" class="preview HEADER_PRIMARY"/>
+                        <line style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="360" y2="360" class="preview HEADER_PRIMARY"/>
+                </svg></button>
+        
+                <button id="rightButton">
+                    <svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M332.64,64.58C313.18,43.57,286,32,256,32c-30.16,0-57.43,11.5-76.8,32.38-19.58,21.11-29.12,49.8-26.88,80.78C156.76,206.28,203.27,256,256,256s99.16-49.71,103.67-110.82C361.94,114.48,352.34,85.85,332.64,64.58Z"/>
+                        <path d="M432,480H80A31,31,0,0,1,55.8,468.87c-6.5-7.77-9.12-18.38-7.18-29.11C57.06,392.94,83.4,353.61,124.8,326c36.78-24.51,83.37-38,131.2-38s94.42,13.5,131.2,38c41.4,27.6,67.74,66.93,76.18,113.75,1.94,10.73-.68,21.34-7.18,29.11A31,31,0,0,1,432,480Z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="chat">
+                
+                <h1>Lorem</h1><b>●</b>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur possimus expedita ipsam quia suscipit aliquam recusandae incidunt ut sapiente unde, natus officiis corrupti itaque inventore architecto fuga magni impedit aperiam tenetur? Accusantium cum delectus nulla non voluptatibus blanditiis, itaque incidunt?</p>
+                
+                <h2>Ipsum</h2><b>●</b>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, non! Corporis sit corrupti fuga quod rerum rem at, ipsa autem?</p>
+                
+                <h1>Lorem</h1><b>●</b>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium vitae praesentium iure voluptas id.</p>
+
+            </div>
+            
+            <div id="bottombar">
+
+            </div>
+        </div>
+
+        <div id="right">
+
+        </div>
+
+        <div id="background"></div>
+    </div>
+
+    <article>
+        <section id="introduction">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </section><hr>
+
+        <section id="description HEADER_PRIMARY">
+            <h2>Header Primary</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi earum autem enim reiciendis veniam. Alias.</p>
+        </section><hr>
+
+        <section id="description HEADER_SECONDARY">
+            <h2>Header Secondary</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, cum nihil? Exercitationem, id animi iusto, consequuntur, nulla quod vitae veritatis voluptatum necessitatibus fugiat porro dolor laborum ducimus minus molestias adipisci. Fugit similique fuga architecto quaerat?</p>
+        </section><hr>
+
+        <section id="description TEXT_NORMAL">
+            <h2>Text Normal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description TEXT_MUTED">
+            <h2>Text Muted</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description TEXT_LINK">
+            <h2>Text Link</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description TEXT_DANGER">
+            <h2>Text Danger</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description INTERACTIVE_NORMAL">
+            <h2>Interactive Normal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description INTERACTIVE_HOVER">
+            <h2>Interactive Hover</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description INTERACTIVE_ACTIVE">
+            <h2>Interactive Active</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description INTERACTIVE_MUTED">
+            <h2>Interactive Muted</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_PRIMARY">
+            <h2>Background Primary</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_SECONDARY">
+            <h2>Background Secondary</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_SECONDARY_ALT">
+            <h2>Background Secondary Alt</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_TERTIARY">
+            <h2>Background Tertiary</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_ACCENT">
+            <h2>Background Accent</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_FLOATING">
+            <h2>Background Floating</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_MOBILE_PRIMARY">
+            <h2>Background Mobile Primary</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_MOBILE_SECONDARY">
+            <h2>Background Mobile Secondary</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_MESSAGE_HOVER">
+            <h2>Background Message Hover</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_MODIFIER_HOVER">
+            <h2>Background Modifier Hover</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_MODIFIER_ACTIVE">
+            <h2>Background Modifier Active</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_MODIFIER_SELECTED">
+            <h2>Background Modifier Selected</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_MODIFIER_ACCENT">
+            <h2>Background Modifier Accent</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description SCROLLBAR_THIN_THUMB">
+            <h2>Scrollbar Thin Thumb</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description SCROLLBAR_THIN_TRACK">
+            <h2>Scrollbar Thin Track</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description SCROLLBAR_AUTO_THUMB">
+            <h2>Scrollbar Auto Thumb</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description SCROLLBAR_AUTO_TRACK">
+            <h2>Scrollbar Auto Track</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description CHANNEL_ICON">
+            <h2>Channel Icon</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description CHAT_BACKGROUND">
+            <h2>Chat Background</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description CHANNEL_TEXT_AREA_PLACEHOLDER">
+            <h2>Channel Text Area Placeholder</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+
+        <section id="description SPOILER_HIDDEN_BACKGROUND">
+            <h2>Spoiler Hidden Background</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </section><hr>
+    </article>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <h2>Final Touches</h2>
+        <p>This is a simple popup screen.</p>
+
+
+        <input type="text" placeholder="Theme Name" id="themeName">
+        <textarea name="description" id="themeDescription" placeholder="Theme Description"></textarea>
+        <input type="text" placeholder="Theme Creator" id="themeAuthorName">
+        <input type="text" placeholder="Theme Creator ID" id="themeAuthorID">
+
+          <button onclick="exportSettings()">Export</button>
+        </div>
+    </div>
+
+
+    <script>
+        loadFromFile("/defaults/default.json", 0)
+        previewInit();
+
+        syncColor("HEADER_PRIMARY", "color");
+        syncColor("HEADER_SECONDARY", "color");
+
+        syncColor("TEXT_NORMAL", "color");
+        syncColor("TEXT_MUTED", "color");
+        syncColor("TEXT_LINK", "color");
+        syncColor("TEXT_DANGER", "color");
+
+        syncColor("INTERACTIVE_NORMAL", "color");
+        syncColor("INTERACTIVE_HOVER", "color");
+        syncColor("INTERACTIVE_ACTIVE", "color");
+        syncColor("INTERACTIVE_MUTED", "color");
+
+        syncColor("BACKGROUND_PRIMARY", "background-color");
+        syncColor("BACKGROUND_SECONDARY", "background-color");
+        syncColor("BACKGROUND_SECONDARY_ALT", "background-color");
+        syncColor("BACKGROUND_TERTIARY", "background-color");
+        syncColor("BACKGROUND_ACCENT", "background-color");
+        syncColor("BACKGROUND_FLOATING", "background-color");
+
+        syncColor("BACKGROUND_MOBILE_PRIMARY", "background-color");
+        syncColor("BACKGROUND_MOBILE_SECONDARY", "background-color");
+
+        syncColor("BACKGROUND_MESSAGE_HOVER", "background-color");
+
+        syncColor("BACKGROUND_MODIFIER_HOVER", "background-color");
+        syncColor("BACKGROUND_MODIFIER_ACTIVE", "background-color");
+        syncColor("BACKGROUND_MODIFIER_SELECTED", "background-color");
+        syncColor("BACKGROUND_MODIFIER_ACCENT", "background-color");
+
+        syncColor("SCROLLBAR_THIN_THUMB", "background-color");
+        syncColor("SCROLLBAR_THIN_TRACK", "background-color");
+        syncColor("SCROLLBAR_AUTO_THUMB", "background-color");
+        syncColor("SCROLLBAR_AUTO_TRACK", "background-color");
+
+        syncColor("CHANNEL_ICON", "color");
+        syncColor("CHAT_BACKGROUND", "background-color");
+        syncColor("CHANNEL_TEXT_AREA_PLACEHOLDER", "background-color");
+        syncColor("SPOILER_HIDDEN_BACKGROUND", "background-color");
+
+
+
+    </script>
+</body>
+</html>
