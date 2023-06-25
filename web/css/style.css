@@ -1,3 +1,5 @@
+/* Fonts */
+    /* kalam */
 @font-face{
     font-family: "kalam";
     src: url(/web/fonts/Kalam-Regular.ttf) format("truetype");
@@ -18,13 +20,13 @@
     src: url(/web/fonts/UbuntuCondensed-Regular.ttf) format("truetype");
 }
 
-
+    /* flow */
 @font-face {
     font-family: "flow-circular";
     src: url(/web/fonts/FlowCircular-Regular.ttf) format("truetype");
 }
 
-
+    /* ggsans */
 @font-face {
     font-family: "ggsans";
     src: url(/web/fonts//ggsans-Normal.ttf) format("truetype");
@@ -74,8 +76,55 @@
     font-family: "ggsans-extrabold-italic";
     src: url(/web/fonts/ggsans-ExtraBoldItalic.ttf) format("truetype");
 }
+/* Fonts END */
+
+/* Variables */
+:root {
+    --HEADER_PRIMARY: #000;
+    --HEADER_SECONDARY: #000;
+
+    --TEXT_NORMAL: #000;
+    --TEXT_MUTED: #000;
+    --TEXT_LINK: #000;
+    
+    --INTERACTIVE_NORMAL: #000;
+    --INTERACTIVE_HOVER: #000;
+    --INTERACTIVE_ACTIVE: #000;
+    --INTERACTIVE_MUTED: #000;
+
+    --BACKGROUND_PRIMARY: #000;
+    --BACKGROUND_SECONDARY: #000;
+    --BACKGROUND_SECONDARY_ALT: #000;
+    --BACKGROUND_TERTIARY: #000;
+    --BACKGROUND_ACCENT: #000;
+    --BACKGROUND_FLOATING: #000;
+
+    --BACKGROUND_MOBILE_PRIMARY: #000;
+    --BACKGROUND_MOBILE_SECONDARY: #000;
+
+    --BACKGROUND_MESSAGE_HOVER: #000;
+
+    --BACKGROUND_MODIFIER_HOVER: #000;
+    --BACKGROUND_MODIFIER_ACTIVE: #000;
+    --BACKGROUND_MODIFIER_SELECTED: #000;
+    --BACKGROUND_MODIFIER_ACCENT: #000;
+
+    --SCROLLBAR_THIN_THUMB: #000;
+    --SCROLLBAR_THIN_TRACK: #000;
+    --SCROLLBAR_AUTO_THUMB: #000;
+    --SCROLLBAR_AUTO_TRACK: #000;
+
+    --CHANNEL_ICON: #000;
+    --CHAT_BACKGROUND: #000;
+    --CHANNEL_TEXT_AREA_PLACEHOLDER: #000;
+    --TEXT_DANGER: #000;
+    --SPOILER_HIDDEN_BACKGROUND: #000;
 
 
+}
+/* Variables END */
+
+/* Misc */
 html {
     scroll-behavior: smooth;
 }
@@ -129,7 +178,10 @@ html {
 body {
     background-color: #ecebeb;
 }
+/* Misc END */
 
+
+/* Sidebar */
 #sidebar {
     position: fixed;
     top: 0;
@@ -283,8 +335,10 @@ input[type=radio]:checked{
 #variant input[type=radio]:checked+span {
     color: #ae00ff;
 }
+/* Sidebar END */
 
 
+/* Text content (center page) */
 article {
     background-color: #f3f1f1;
     border: 2px solid #ececec;
@@ -326,8 +380,10 @@ article h2 {
 
     text-align: center;
 }
+/* Text content (center page) END*/
 
 
+/* Theme preview */
 #prev {
     margin: 0 2% 0 1%;
     width: 45vh;
@@ -492,7 +548,10 @@ article h2 {
     font-family: "ubuntu-condensed";
     margin-right: 10px;
 }
+/* Theme preview END */
 
+
+/* Popup window */
 .popup {
     display: none;
     position: fixed;
@@ -584,3 +643,49 @@ article h2 {
     text-align: center;
 
 }
+
+#themeDescription::placeholder {
+    color: #500070;
+    text-align: center;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#discord, #github{
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#discord {
+    background-color: #6400e7;
+}
+
+#discord:hover {
+    background-color: #5000b3;
+}
+
+#github {
+    background-color: #b000e6;
+}
+
+#github:hover {
+    background-color: #8c00b3;
+}
+
+#buttons img {
+    width: 95%;
+}
+/* Popup window END */

@@ -451,17 +451,21 @@
 
     <div class="popup" id="popup">
         <div class="popup-content">
-        <span class="popup-close" onclick="closePopup()">&times;</span>
-        <h2>Final Touches</h2>
-        <p>This is a simple popup screen.</p>
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h2>Final Touches</h2>
+            <p>This is a simple popup screen.</p>
 
-
-        <input type="text" placeholder="Theme Name" id="themeName">
-        <textarea name="description" id="themeDescription" placeholder="Theme Description"></textarea>
-        <input type="text" placeholder="Theme Creator" id="themeAuthorName">
-        <input type="text" placeholder="Theme Creator ID" id="themeAuthorID">
+            <input type="text" placeholder="Theme Name" id="themeName" autocomplete="off">
+            <textarea name="description" id="themeDescription" placeholder="Theme Description" autocomplete="off"></textarea>
+            <input type="text" placeholder="Theme Creator" id="themeAuthorName" autocomplete="off">
+            <input type="text" placeholder="Theme Creator ID" id="themeAuthorID" autocomplete="off">
 
           <button onclick="exportSettings()">Export</button>
+        </div>
+
+        <div id="buttons">
+            <button id="github" onclick="window.open('https://www.github.com/CypiPro/Vendetta-Theme-Creator')"><img src="/web/images/GitHub.png" alt=""></button>
+            <button id="discord" onclick="window.open('https://discord.com/')"><img src="/web/images/Discord.png" alt="Discord"></button>
         </div>
     </div>
 
@@ -469,46 +473,6 @@
     <script>
         loadFromFile("/web/defaults/default.json", 0)
         previewInit();
-
-        syncColor("HEADER_PRIMARY", "color");
-        syncColor("HEADER_SECONDARY", "color");
-
-        syncColor("TEXT_NORMAL", "color");
-        syncColor("TEXT_MUTED", "color");
-        syncColor("TEXT_LINK", "color");
-        syncColor("TEXT_DANGER", "color");
-
-        syncColor("INTERACTIVE_NORMAL", "color");
-        syncColor("INTERACTIVE_HOVER", "color");
-        syncColor("INTERACTIVE_ACTIVE", "color");
-        syncColor("INTERACTIVE_MUTED", "color");
-
-        syncColor("BACKGROUND_PRIMARY", "background-color");
-        syncColor("BACKGROUND_SECONDARY", "background-color");
-        syncColor("BACKGROUND_SECONDARY_ALT", "background-color");
-        syncColor("BACKGROUND_TERTIARY", "background-color");
-        syncColor("BACKGROUND_ACCENT", "background-color");
-        syncColor("BACKGROUND_FLOATING", "background-color");
-
-        syncColor("BACKGROUND_MOBILE_PRIMARY", "background-color");
-        syncColor("BACKGROUND_MOBILE_SECONDARY", "background-color");
-
-        syncColor("BACKGROUND_MESSAGE_HOVER", "background-color");
-
-        syncColor("BACKGROUND_MODIFIER_HOVER", "background-color");
-        syncColor("BACKGROUND_MODIFIER_ACTIVE", "background-color");
-        syncColor("BACKGROUND_MODIFIER_SELECTED", "background-color");
-        syncColor("BACKGROUND_MODIFIER_ACCENT", "background-color");
-
-        syncColor("SCROLLBAR_THIN_THUMB", "background-color");
-        syncColor("SCROLLBAR_THIN_TRACK", "background-color");
-        syncColor("SCROLLBAR_AUTO_THUMB", "background-color");
-        syncColor("SCROLLBAR_AUTO_TRACK", "background-color");
-
-        syncColor("CHANNEL_ICON", "color");
-        syncColor("CHAT_BACKGROUND", "background-color");
-        syncColor("CHANNEL_TEXT_AREA_PLACEHOLDER", "background-color");
-        syncColor("SPOILER_HIDDEN_BACKGROUND", "background-color");
     </script>
 </body>
 </html>

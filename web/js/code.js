@@ -1,6 +1,5 @@
 function goto(id) {
     document.getElementById(id).scrollIntoView();
-    console.log(id);
 }
 
 let loadedTheme;
@@ -40,6 +39,10 @@ function loadTheme(Theme, variantID) {
         try {
             document.getElementsByClassName(key)[0].value = value[variantID];
             document.getElementsByClassName(key)[1].value = value[variantID];
+
+            document.documentElement.style.setProperty(`--${key}`, value[variantID]);
+
+            window.addEventListener("load" , syncColor(key));
         }
         catch (error) {
             console.error(error);
@@ -49,35 +52,32 @@ function loadTheme(Theme, variantID) {
 }
 
 
-function syncColor(className, param) {
+function syncColor(className) {
     const element1 = document.getElementsByClassName(className)[0];
     const element2 = document.getElementsByClassName(className)[1];
 
-    const preview = document.getElementsByClassName('preview '+className);
+    // const preview = document.getElementsByClassName('preview '+className);
 
     element1.addEventListener('input', () => {
         element2.value = element1.value;
 
         loadedTheme.semanticColors[className][variant] = element1.value;
         
-        for (let i = 0; i < preview.length; i++) {
-            preview[i].style[param] = element1.value;
-        }
+        document.documentElement.style.setProperty(`--${className}`, element1.value);
     });
 
     element2.addEventListener('input', () => {
         element1.value = element2.value;
 
-        loadedTheme.semanticColors[className][variant] = element1.value;
+        loadedTheme.semanticColors[className][variant] = element2.value;
 
-        for (let i = 0; i < preview.length; i++) {
-            preview[i].style[param] = element1.value;
-        }
+        document.documentElement.style.setProperty(`--${className}`, element2.value);
     });
 
     window.addEventListener('ThemeLoad', () => {
         element1.value = element2.value;
-        for (let i = 0; i < preview.length; i++) {preview[i].style[param] = element2.value;}
+        document.documentElement.style.setProperty(`--${className}`, element2.value);
+        // for (let i = 0; i < preview.length; i++) {preview[i].style[param] = element2.value;}
     });
 }
 
@@ -202,7 +202,7 @@ function dragLeaveHandler(ev) {
 
 
 function openPopup() {
-    document.getElementById("popup").style.display = "block";
+    document.getElementById("popup").style.display = "flex";
   }
 
   function closePopup() {
