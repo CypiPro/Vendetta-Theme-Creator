@@ -2,7 +2,7 @@
 
 `WIP`
 
-[Website link](web/index.html)
+[Website link](https://cypipro.github.io/Vendetta-Theme-Creator/)
 
 ## Description
 
