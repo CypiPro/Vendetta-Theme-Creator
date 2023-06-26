@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI TEST</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 
-    <script src="js/code.js"></script>
+    <script src="code.js"></script>
 </head>
 <body>
     <nav id="sidebar" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event)">
@@ -105,6 +105,12 @@
             <legend onclick="goto('description BACKGROUND_FLOATING')">Background Floating</legend>
             <input type="color" class="BACKGROUND_FLOATING">
             <input type="text" class="BACKGROUND_FLOATING" value="#aaeeff">
+        </fieldset>
+
+        <fieldset>
+            <legend onclick="goto('description BACKGROUND_NESTED_FLOATING')">Background Nested Floating</legend>
+            <input type="color" class="BACKGROUND_NESTED_FLOATING">
+            <input type="text" class="BACKGROUND_NESTED_FLOATING" value="#aaeeff">
         </fieldset>
 
         <fieldset>
@@ -220,13 +226,23 @@
     <div id="prev">
         <div id="left">
             <div>
-
+                
             </div>
 
             <div id="channels">
-                <h1>AAAAAA</h1>
+                <img src="https://cypipro.github.io/Vendetta-Theme-Creator/web/images/background.jpg" alt="server banner">
+                <h1>Server Name <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512">
+                    <g>
+                        <circle cx="458.667" cy="256" r="53.333"/>
+                        <circle cx="256" cy="256" r="53.333"/>
+                        <circle cx="53.333" cy="256" r="53.333"/>
+                    </g>
+                </svg>
+            </h1>
 
-                <h2>BBBBBBB</h2>
+
+                <h2><svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z"/></svg>
+                    BBBBBBB</h2>
                 <p><b>#</b>aaaaa</p>
                 <p><b>#</b>aaaaaaaa</p>
                 <p><b>#</b>aaaa</p>
@@ -249,9 +265,9 @@
                 <button id="leftButton">
                     <svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
                         <title/>
-                        <line style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="152" y2="152" class="preview HEADER_PRIMARY"/>
-                        <line style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="256" y2="256" class="preview HEADER_PRIMARY"/>
-                        <line style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="360" y2="360" class="preview HEADER_PRIMARY"/>
+                        <line style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="152" y2="152"/>
+                        <line style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="256" y2="256"/>
+                        <line style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:48px" x1="88" x2="424" y1="360" y2="360"/>
                 </svg></button>
         
                 <button id="rightButton">
@@ -290,162 +306,167 @@
     <article>
         <section id="introduction">
             <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>introduction to the website here</p>
         </section><hr>
 
         <section id="description HEADER_PRIMARY">
             <h2>Header Primary</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi earum autem enim reiciendis veniam. Alias.</p>
+            <p>The primary color for headers, such as channel and server names (also for settings page text and profiles)</p>
         </section><hr>
 
         <section id="description HEADER_SECONDARY">
             <h2>Header Secondary</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, cum nihil? Exercitationem, id animi iusto, consequuntur, nulla quod vitae veritatis voluptatum necessitatibus fugiat porro dolor laborum ducimus minus molestias adipisci. Fugit similique fuga architecto quaerat?</p>
+            <p>The secondary color for headers, such as channel and server names (also for settings page text and profiles, status, user tags)</p>
         </section><hr>
 
         <section id="description TEXT_NORMAL">
             <h2>Text Normal</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The color for regular text in chat</p>
         </section><hr>
 
         <section id="description TEXT_MUTED">
             <h2>Text Muted</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The color for muted text, also for time stamps in chat, texts in search bar, text in settings page (channels, vendetta), changes the send icon button if chat box is empty & some loading elements.</p>
         </section><hr>
 
         <section id="description TEXT_LINK">
             <h2>Text Link</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The color for links in chat</p>
         </section><hr>
 
         <section id="description TEXT_DANGER">
             <h2>Text Danger</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Themes the Delete button in plugins and themes settings, leave server button and some texts in clyde messages</p>
         </section><hr>
 
         <section id="description INTERACTIVE_NORMAL">
             <h2>Interactive Normal</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The color for interactive elements, such as buttons in settings page and bottom bar.</p>
         </section><hr>
 
         <section id="description INTERACTIVE_HOVER">
             <h2>Interactive Hover</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The color for interactive elements when hovered over</p>
         </section><hr>
 
         <section id="description INTERACTIVE_ACTIVE">
             <h2>Interactive Active</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The color for interactive elements when clicked or activated like active or unread channels and selected buttons in bottom bar, names in friend lists</p>
         </section><hr>
 
         <section id="description INTERACTIVE_MUTED">
             <h2>Interactive Muted</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The color for inactive interactive elements like muted channels.</p>
         </section><hr>
 
         <section id="description BACKGROUND_PRIMARY">
             <h2>Background Primary</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The primary background color for the UI, navigation bar, channel background for tabV2</p>
         </section><hr>
 
         <section id="description BACKGROUND_SECONDARY">
             <h2>Background Secondary</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The secondary background color for the UI, background of create new server icons and stuffs, settings embed of plugins and themes, some elements in forum pages</p>
         </section><hr>
 
         <section id="description BACKGROUND_SECONDARY_ALT">
             <h2>Background Secondary Alt</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Chat Input background [Add Files, Gift Buttons], Emoji/GIF/Sticker slider background.</p>
         </section><hr>
 
         <section id="description BACKGROUND_TERTIARY">
             <h2>Background Tertiary</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Global Border background when elements are slide out [Server List, User List], Search Bar background, top bar separator when in channel.</p>
         </section><hr>
 
         <section id="description BACKGROUND_ACCENT">
             <h2>Background Accent</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Reply Pipe, Edit user Profile button, Album Buttons, Thread Buttons, Invite server button background in channel list.</p>
         </section><hr>
 
         <section id="description BACKGROUND_FLOATING">
             <h2>Background Floating</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Profile Top background, Server Boost Page Icons</p>
+        </section><hr>
+
+        <section id="description BACKGROUND_NESTED_FLOATING">
+            <h2>Background Nested Floating</h2>
+            <p>Settings buttons/boxes background (ios)</p>
         </section><hr>
 
         <section id="description BACKGROUND_MOBILE_PRIMARY">
             <h2>Background Mobile Primary</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Account/Settings background</p>
         </section><hr>
 
         <section id="description BACKGROUND_MOBILE_SECONDARY">
             <h2>Background Mobile Secondary</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Channel List/DM Background, Global Header Color</p>
         </section><hr>
 
         <section id="description BACKGROUND_MESSAGE_HOVER">
             <h2>Background Message Hover</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>The color for interactive elements when hovered over</p>
         </section><hr>
 
         <section id="description BACKGROUND_MODIFIER_HOVER">
             <h2>Background Modifier Hover</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Background color of slash commands</p>
         </section><hr>
 
         <section id="description BACKGROUND_MODIFIER_ACTIVE">
             <h2>Background Modifier Active</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Background color of clyde message and some other elements, selected server emotes</p>
         </section><hr>
 
         <section id="description BACKGROUND_MODIFIER_SELECTED">
             <h2>Background Modifier Selected</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Background color of selected User or Channel</p>
         </section><hr>
 
         <section id="description BACKGROUND_MODIFIER_ACCENT">
             <h2>Background Modifier Accent</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Separators [Server List Top, Bottom Bar, Server Info, User List, User Info, @, Notifications, Friends, Search, Settings]</p>
         </section><hr>
 
         <section id="description SCROLLBAR_THIN_THUMB">
             <h2>Scrollbar Thin Thumb</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Elements of scroll bars</p>
         </section><hr>
 
         <section id="description SCROLLBAR_THIN_TRACK">
             <h2>Scrollbar Thin Track</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Elements of scroll bars</p>
         </section><hr>
 
         <section id="description SCROLLBAR_AUTO_THUMB">
             <h2>Scrollbar Auto Thumb</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Elements of scroll bars</p>
         </section><hr>
 
         <section id="description SCROLLBAR_AUTO_TRACK">
             <h2>Scrollbar Auto Track</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Elements of scroll bars</p>
         </section><hr>
 
         <section id="description CHANNEL_ICON">
             <h2>Channel Icon</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Chat input text, Symbols [@, Lock, # (except muted channels)</p>
         </section><hr>
 
         <section id="description CHAT_BACKGROUND">
             <h2>Chat Background</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Themes the background of chat</p>
         </section><hr>
 
         <section id="description CHANNEL_TEXT_AREA_PLACEHOLDER">
             <h2>Channel Text Area Placeholder</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Themes the “message” text in chat box</p>
         </section><hr>
 
         <section id="description SPOILER_HIDDEN_BACKGROUND">
             <h2>Spoiler Hidden Background</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <p>Themes the hidden spoiler background</p>
         </section><hr>
     </article>
 
@@ -464,14 +485,14 @@
         </div>
 
         <div id="buttons">
-            <button id="github" onclick="window.open('https://www.github.com/CypiPro/Vendetta-Theme-Creator')"><img src="/web/images/GitHub.png" alt=""></button>
-            <button id="discord" onclick="window.open('https://discord.com/')"><img src="/web/images/Discord.png" alt="Discord"></button>
+            <button id="github" onclick="window.open('https://www.github.com/CypiPro/Vendetta-Theme-Creator')"><img src="https://cypipro.github.io/Vendetta-Theme-Creator/web/images/GitHub.png" alt=""></button>
+            <button id="discord" onclick="window.open('https://discord.gg/QM5bS7Fw8c')"><img src="https://cypipro.github.io/Vendetta-Theme-Creator/web/images/Discord.png" alt="Discord"></button>
         </div>
     </div>
 
 
     <script>
-        loadFromFile("/web/defaults/default.json", 0)
+        loadFromFile("https://cypipro.github.io/Vendetta-Theme-Creator/web/default.json", 0)
         previewInit();
     </script>
 </body>
