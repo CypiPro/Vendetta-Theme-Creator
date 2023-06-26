@@ -292,7 +292,7 @@
             </div>
             
             <div id="bottombar">
-
+                <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
             </div>
         </div>
 
@@ -480,8 +480,11 @@
             <textarea name="description" id="themeDescription" placeholder="Theme Description" autocomplete="off"></textarea>
             <input type="text" placeholder="Theme Creator" id="themeAuthorName" autocomplete="off">
             <input type="text" placeholder="Theme Creator ID" id="themeAuthorID" autocomplete="off">
-
-          <button onclick="exportSettings()">Export</button>
+            
+            <div id="exportOptions">
+                <button onclick="copyToClipboard()">Copy</button>
+                <button onclick="download()">Download</button>
+            </div>
         </div>
 
         <div id="buttons">

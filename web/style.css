@@ -489,6 +489,29 @@ article h2 {
     fill: var(--INTERACTIVE_HOVER);
 }
 
+#bottombar textarea {
+    font-family: "ggsans-semibold";
+    margin: 10px 0 0 10px;
+    font-size: 20px;
+    height: 30px;
+
+    color: var(--CHANNEL_ICON);
+    background-color: var(--BACKGROUND_SECONDARY_ALT);
+
+    padding: 5px 5px 5px 20px;
+    border-radius: 25px;
+    resize: none;
+    border: none;
+}
+
+#bottombar textarea::placeholder {
+    color: var(--CHANNEL_TEXT_AREA_PLACEHOLDER);
+}
+
+#bottombar textarea:focus {
+    outline: none;
+}
+
 #chat {
     margin: 80px 15px;
 }
@@ -631,7 +654,7 @@ article h2 {
     cursor: pointer;
 }
 
-.popup button {
+/* .popup button {
     width: 100px;
     height: 40px;
     background-color: #b700ff;
@@ -648,7 +671,7 @@ article h2 {
 
 .popup button:hover {
     background-color: #a000e6;
-}
+} */
 
 .popup input {
     width: 100%;
@@ -687,6 +710,26 @@ article h2 {
 #themeDescription::placeholder {
     color: #500070;
     text-align: center;
+}
+
+#exportOptions button {
+    width: 100px;
+    height: 40px;
+    background-color: #b700ff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "ubuntu-condensed";
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.04s ease-in-out;
+}
+
+#exportOptions button:active{
+    background-color: #e600c0;
+    transform: translateY(3px);
 }
 
 #buttons {
