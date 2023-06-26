@@ -2,6 +2,8 @@
 
 `WIP`
 
+[Website link](web/index.html)
+
 ## Description
 
 ***Simplify the process of creating custom themes for the Vendetta Discord client.***
@@ -38,9 +40,7 @@ Vendetta Theme Creator aims to empower users of the Vendetta Discord client with
 ---
 
 ## Contact
-- [Discord [TBA]](https://discord.gg)
+- [Discord](https://discord.gg/QM5bS7Fw8c)
   - Help with the theme creator
   - Questions/suggestions
   - Share your work
-
-**[Back to top](#table-of-contents)**
