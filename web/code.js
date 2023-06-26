@@ -133,7 +133,16 @@ function previewInit() {
 
 
 
-function exportSettings() {
+function copyToClipboard() {
+    loadedTheme.name = document.getElementById('themeName').value;
+    loadedTheme.description = document.getElementById('themeDescription').value;
+    loadedTheme.authors.push({"name":`${document.getElementById('themeAuthorName').value}`, "id":`${document.getElementById('themeAuthorID').value}}`})
+    const file = JSON.stringify(loadedTheme)
+
+    navigator.clipboard.writeText(file)
+}
+
+function download() {
     loadedTheme.name = document.getElementById('themeName').value;
     loadedTheme.description = document.getElementById('themeDescription').value;
     loadedTheme.authors.push({"name":`${document.getElementById('themeAuthorName').value}`, "id":`${document.getElementById('themeAuthorID').value}}`})
@@ -141,7 +150,13 @@ function exportSettings() {
 
     const blob = new Blob([file], {type: "text/plain"});
     const url = URL.createObjectURL(blob);
-    const newTab = window.open(url, "_blank");
+
+    const link = document.createElement('a');
+    
+    link.download = `${loadedTheme.name}.json`;
+    link.href = url;
+    link.click();
+    URL.revokeObjectURL(url);
 }
 
 
