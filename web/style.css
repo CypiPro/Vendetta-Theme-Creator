@@ -2,79 +2,79 @@
     /* kalam */
 @font-face{
     font-family: "kalam";
-    src: url(/web/fonts/Kalam-Regular.ttf) format("truetype");
+    src: url(fonts/Kalam-Regular.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "kalam-bold";
-    src: url(/web/fonts/Kalam-Bold.ttf) format("truetype");
+    src: url(fonts/Kalam-Bold.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "kalam-light";
-    src: url(/web/fonts/Kalam-Light.ttf) format("truetype");
+    src: url(fonts/Kalam-Light.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ubuntu-condensed";
-    src: url(/web/fonts/UbuntuCondensed-Regular.ttf) format("truetype");
+    src: url(fonts/UbuntuCondensed-Regular.ttf) format("truetype");
 }
 
     /* flow */
 @font-face {
     font-family: "flow-circular";
-    src: url(/web/fonts/FlowCircular-Regular.ttf) format("truetype");
+    src: url(fonts/FlowCircular-Regular.ttf) format("truetype");
 }
 
     /* ggsans */
 @font-face {
     font-family: "ggsans";
-    src: url(/web/fonts//ggsans-Normal.ttf) format("truetype");
+    src: url(fonts/ggsans-Normal.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggstans-medium";
-    src: url(/web/fonts//ggsans-Medium.ttf) format("truetype");
+    src: url(fonts/ggsans-Medium.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggsans-semibold";
-    src: url(/web/fonts/ggsans-Semibold.ttf) format("truetype");
+    src: url(fonts/ggsans-Semibold.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggsans-bold";
-    src: url(/web/fonts//ggsans-Bold.ttf) format("truetype");
+    src: url(fonts/ggsans-Bold.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggsans-extrabold";
-    src: url(/web/fonts/ggsans-ExtraBold.ttf) format("truetype");
+    src: url(fonts/ggsans-ExtraBold.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggsans-italic";
-    src: url(/web/fonts/ggsans-NormalItalic.ttf) format("truetype");
+    src: url(fonts/ggsans-NormalItalic.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggsans-medium-italic";
-    src: url(/web/fonts/ggsans-MediumItalic.ttf) format("truetype");
+    src: url(fonts/ggsans-MediumItalic.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggsans-semibold-italic";
-    src: url(/web/fonts/ggsans-SemiboldItalic.ttf) format("truetype");
+    src: url(fonts/ggsans-SemiboldItalic.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggsans-bold-italic";
-    src: url(/web/fonts/ggsans-BoldItalic.ttf) format("truetype");
+    src: url(fonts/ggsans-BoldItalic.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "ggsans-extrabold-italic";
-    src: url(/web/fonts/ggsans-ExtraBoldItalic.ttf) format("truetype");
+    src: url(fonts/ggsans-ExtraBoldItalic.ttf) format("truetype");
 }
 /* Fonts END */
 
