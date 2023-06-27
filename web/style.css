@@ -1,0 +1,774 @@
+/* Fonts */
+    /* kalam */
+@font-face{
+    font-family: "kalam";
+    src: url(fonts/Kalam-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "kalam-bold";
+    src: url(fonts/Kalam-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "kalam-light";
+    src: url(fonts/Kalam-Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ubuntu-condensed";
+    src: url(fonts/UbuntuCondensed-Regular.ttf) format("truetype");
+}
+
+    /* flow */
+@font-face {
+    font-family: "flow-circular";
+    src: url(fonts/FlowCircular-Regular.ttf) format("truetype");
+}
+
+    /* ggsans */
+@font-face {
+    font-family: "ggsans";
+    src: url(fonts/ggsans-Normal.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggstans-medium";
+    src: url(fonts/ggsans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggsans-semibold";
+    src: url(fonts/ggsans-Semibold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggsans-bold";
+    src: url(fonts/ggsans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggsans-extrabold";
+    src: url(fonts/ggsans-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggsans-italic";
+    src: url(fonts/ggsans-NormalItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggsans-medium-italic";
+    src: url(fonts/ggsans-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggsans-semibold-italic";
+    src: url(fonts/ggsans-SemiboldItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggsans-bold-italic";
+    src: url(fonts/ggsans-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ggsans-extrabold-italic";
+    src: url(fonts/ggsans-ExtraBoldItalic.ttf) format("truetype");
+}
+/* Fonts END */
+
+/* Variables */
+:root {
+    --HEADER_PRIMARY: #000;
+    --HEADER_SECONDARY: #000;
+
+    --TEXT_NORMAL: #000;
+    --TEXT_MUTED: #000;
+    --TEXT_LINK: #000;
+    
+    --INTERACTIVE_NORMAL: #000;
+    --INTERACTIVE_HOVER: #000;
+    --INTERACTIVE_ACTIVE: #000;
+    --INTERACTIVE_MUTED: #000;
+
+    --BACKGROUND_PRIMARY: #000;
+    --BACKGROUND_SECONDARY: #000;
+    --BACKGROUND_SECONDARY_ALT: #000;
+    --BACKGROUND_TERTIARY: #000;
+    --BACKGROUND_ACCENT: #000;
+    --BACKGROUND_FLOATING: #000;
+
+    --BACKGROUND_MOBILE_PRIMARY: #000;
+    --BACKGROUND_MOBILE_SECONDARY: #000;
+
+    --BACKGROUND_MESSAGE_HOVER: #000;
+
+    --BACKGROUND_MODIFIER_HOVER: #000;
+    --BACKGROUND_MODIFIER_ACTIVE: #000;
+    --BACKGROUND_MODIFIER_SELECTED: #000;
+    --BACKGROUND_MODIFIER_ACCENT: #000;
+
+    --SCROLLBAR_THIN_THUMB: #000;
+    --SCROLLBAR_THIN_TRACK: #000;
+    --SCROLLBAR_AUTO_THUMB: #000;
+    --SCROLLBAR_AUTO_TRACK: #000;
+
+    --CHANNEL_ICON: #000;
+    --CHAT_BACKGROUND: #000;
+    --CHANNEL_TEXT_AREA_PLACEHOLDER: #000;
+    --TEXT_DANGER: #000;
+    --SPOILER_HIDDEN_BACKGROUND: #000;
+
+
+}
+/* Variables END */
+
+/* Misc */
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f3f1f1;
+    border: solid 3px #f3f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+    box-shadow: inset 0 10px 5px rgba(255, 255, 255, 0.2);
+    border: solid 3px #f3f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #747474;
+}
+
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    font-family: "ubuntu-condensed";
+}
+
+[data-tooltip]:hover::before {
+    opacity: 1;
+}
+
+body {
+    background-color: #ecebeb;
+}
+/* Misc END */
+
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+    background: #f3f1f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+    transition: background-color 0.3s ease;
+
+    padding: 20px 0 60px 0;
+
+    overflow-y: scroll;
+}
+
+#export {
+    background-color: #cecece;
+    color: #2b2b2b;
+    border: 1px solid #b9b9b9;
+    border-radius: 5px;
+    padding: 5px 30%;
+    font-size: 16px;
+    font-family: "ubuntu-condensed";
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    right: 10px;
+}
+
+button:hover {
+    background-color: #b9b9b9;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+
+    background-color: #f7f6f6;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+fieldset input[type=text] {
+    width: 75px;
+    height: 25px;
+    padding: 0px 7px;
+    box-sizing: border-box;
+    border: 2px solid #ececec;
+    border-radius: 4px;
+
+    margin: 0 5px;
+}
+
+fieldset input[type=text]:focus {
+    outline: none;
+    border-color: #c7c7c7;
+}
+
+fieldset input[type=color] {
+    width: 40px;
+    height: 25px;
+    box-sizing: border-box;
+    border: 2px solid #ececec;
+    background-color: #fff;
+    border-radius: 4px;
+
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+fieldset input[type=color]:focus {
+    outline: none;
+    border-color: #c7c7c7;
+
+}
+
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    
+    font-family: "ubuntu-condensed";
+    cursor: pointer;
+
+    transition: color 0.3s ease-in-out;
+}
+
+legend:hover {
+    color: #727272;
+
+}
+
+#variant {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    width: 15%;
+
+    padding: 10px 0;
+    background-color: #e9e8e8;
+    border: 1px solid #d9d9d9;
+
+    font-family: "ubuntu-condensed";
+
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type=radio] {
+    margin: 0 10px;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    appearance: none;
+    font: inherit;
+    color: currentColor;
+    width: 14px;
+    height: 14px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+    place-content: center;
+    display: inline-grid;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #ae00ff;
+}
+  
+input[type="radio"]:checked::before {
+    transform: scale(0.7);
+}
+
+input[type=radio]:checked{
+    border-color: #d67eff;
+
+}
+
+#variant input[type=radio]:checked+span {
+    color: #ae00ff;
+}
+/* Sidebar END */
+
+
+/* Text content (center page) */
+article {
+    background-color: #f3f1f1;
+    border: 2px solid #ececec;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+    
+    padding: 40px;
+
+    font-family: "ubuntu-condensed";
+
+    flex: 1;
+    margin: 3vh 16% 450px 49vh; 
+}
+
+body {
+    display: flex;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #f3f1f1, #929292, #f3f1f1);
+    margin: 30px;
+}
+
+article p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0 30px;
+}
+
+article h2 {
+    font-size: 30px;
+    color: #333;
+    margin: 10px;
+    padding: 30px 0 10px 0;
+
+    text-align: center;
+}
+/* Text content (center page) END*/
+
+
+/* Theme preview */
+#prev {
+    margin: 0 2% 0 1%;
+    width: 400px;
+    height: 800px;
+
+    position: fixed;
+    top: 50%;
+
+    background-color: #333;
+    border-radius: 15px;
+
+    transform: translateY(-50%);
+
+    box-shadow: #000000cc 0px 0px 10px 0px;
+}
+
+#left, #middle, #right, #background {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: #bdbdbd;
+    width: 95%;
+    height: 95%;
+
+    border-radius: 5px;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: transform 0.3s ease-in-out, clip-path 0.3s ease-in-out;
+}
+
+#background {
+    background-color: var(--BACKGROUND_TERTIARY);
+    z-index: -1;
+}
+
+#middle {
+    z-index: 1;
+    background-color: var(--CHAT_BACKGROUND);
+}
+
+#left {
+    width: 79%;
+    margin-left: -33px;
+    background-color: var(--BACKGROUND_TERTIARY);
+}
+
+#right {
+    width: 79%;
+    margin-left: 33px;
+    background-color: var(--BACKGROUND_MODIFIER_ACCENT);
+
+}
+
+#topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    background-color: var(--BACKGROUND_MODIFIER_ACCENT);
+    border-radius: 5px 5px 0 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bottombar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    background-color: var(--BACKGROUND_MODIFIER_ACCENT);
+    border-radius: 0 0 5px 5px;
+    z-index: 2;
+}
+
+#topbar button, #bottombar button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#topbar svg, #bottombar svg {
+    width: 35px;
+    height: 35px;
+    stroke: var(--INTERACTIVE_NORMAL);
+    fill: var(--INTERACTIVE_NORMAL);
+    transition: all 0.15s ease-in-out;
+}
+
+#topbar svg:hover, #bottombar svg:hover {
+    stroke: var(--INTERACTIVE_HOVER);
+    fill: var(--INTERACTIVE_HOVER);
+}
+
+#bottombar textarea {
+    font-family: "ggsans-semibold";
+    margin: 10px 0 0 10px;
+    font-size: 20px;
+    height: 30px;
+
+    color: var(--CHANNEL_ICON);
+    background-color: var(--BACKGROUND_SECONDARY_ALT);
+
+    padding: 5px 5px 5px 20px;
+    border-radius: 25px;
+    resize: none;
+    border: none;
+}
+
+#bottombar textarea::placeholder {
+    color: var(--CHANNEL_TEXT_AREA_PLACEHOLDER);
+}
+
+#bottombar textarea:focus {
+    outline: none;
+}
+
+#chat {
+    margin: 80px 15px;
+}
+
+#chat h1, #chat h2{
+    font-family: "ggsans-semibold";
+    margin-left: 60px;
+}
+
+#chat p {
+    font-family: "ggsans";
+    margin-left: 60px;
+    color: var(--TEXT_NORMAL);
+}
+
+#chat h1 {
+    font-size: 20px;
+    color: #00ff9d;
+    margin-bottom: -15px;
+    margin-top: 20px;
+}
+
+#chat h2 {
+    font-size: 20px;
+    color: #00eeff;
+    margin-bottom: -15px;
+}
+
+#chat b {
+    font-family: "flow-circular";
+    font-size: 100px;
+    margin-left: -10px;
+    margin-top: -60px;
+    position: absolute;
+    color: #ffffff;
+}
+
+#channels {
+    height: 100%;
+    width: 225px;
+    position: fixed;
+    right: 0;
+    border-radius: 5px;
+    background-color: var(--BACKGROUND_MOBILE_SECONDARY);
+    padding: 0 0 0 30px;
+}
+
+#channels h1 {
+    font-family: "ggsans-semibold";
+    font-size: 18px;
+    margin-top: -130px;
+    margin-bottom: 110px;
+    color: var(--HEADER_PRIMARY);
+}
+
+#channels h2 {
+    font-family: "ggsans-bold";
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#channels p {
+    font-family: "ggsans";
+    font-size: 17px;
+    color: #000000;
+    margin-top: -10px;
+}
+
+#channels b {
+    font-family: "ubuntu-condensed";
+    margin-right: 10px;
+    color: var(--CHANNEL_ICON);
+}
+
+#channels img {
+    width: 255px;
+    height: 143px;
+    margin-left: -30px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#channels svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 75px;
+    fill: #fff;
+
+    transform: translateY(5px);
+}
+
+#channels h2 svg {
+    fill: #000;
+    width: 15px;
+    height: 15px;
+    margin: 0 0 2px -15px;
+}
+/* Theme preview END */
+
+
+/* Popup window */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    font-family: "ubuntu-condensed";
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    size-adjust: height;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+}
+
+/* .popup button {
+    width: 100px;
+    height: 40px;
+    background-color: #b700ff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "ubuntu-condensed";
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.popup button:hover {
+    background-color: #a000e6;
+} */
+
+.popup input {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #b700ff;
+    border-radius: 5px;
+    outline: none;
+    font-family: "ubuntu-condensed";
+    font-size: 20px;
+    color: #b700ff;
+    text-align: center;
+}
+
+.popup input::placeholder {
+    color: #500070;
+    text-align: center;
+}
+
+#themeDescription {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #b700ff;
+    border-radius: 5px;
+    outline: none;
+    font-family: "ubuntu-condensed";
+    font-size: 17px;
+    color: #680091;
+    text-align: center;
+
+}
+
+#themeDescription::placeholder {
+    color: #500070;
+    text-align: center;
+}
+
+#exportOptions button {
+    width: 100px;
+    height: 40px;
+    background-color: #b700ff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: "ubuntu-condensed";
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.04s ease-in-out;
+}
+
+#exportOptions button:active{
+    background-color: #e600c0;
+    transform: translateY(3px);
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#discord, #github{
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#discord {
+    background-color: #6400e7;
+}
+
+#discord:hover {
+    background-color: #5000b3;
+}
+
+#github {
+    background-color: #b000e6;
+}
+
+#github:hover {
+    background-color: #8c00b3;
+}
+
+#buttons img {
+    width: 95%;
+}
+/* Popup window END */
