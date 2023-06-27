@@ -1,5 +1,12 @@
 function goto(id) {
-    document.getElementById(id).scrollIntoView();
+    element = document.getElementById(id);
+    element.scrollIntoView();
+
+    element.style.scale = 1.05;
+    
+    setTimeout(() => {
+        element.style.scale = 1;
+    }, 300);
 }
 
 let loadedTheme;

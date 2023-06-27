@@ -195,6 +195,8 @@ body {
     padding: 20px 0 60px 0;
 
     overflow-y: scroll;
+    scroll-behavior: smooth;
+
 }
 
 #export {
@@ -225,6 +227,12 @@ fieldset {
 
     display: flex;
     align-items: center;
+
+    transition: scale 0.2s ease-out;
+}
+
+fieldset:hover {
+    scale: 1.02;
 }
 
 fieldset input[type=text] {
@@ -271,7 +279,7 @@ legend {
     font-family: "ubuntu-condensed";
     cursor: pointer;
 
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 legend:hover {
@@ -357,6 +365,15 @@ body {
     display: flex;
 }
 
+section {
+    transition: all 0.3s ease-in-out, transform 0.2s ease-out;
+    cursor: pointer;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
 hr {
     border: 0;
     height: 1px;
@@ -369,7 +386,8 @@ article p {
     font-size: 18px;
     line-height: 1.5;
     color: #333;
-    margin: 0 30px;
+    margin: 0 30px 60px 30px;
+    text-align: center;
 }
 
 article h2 {
