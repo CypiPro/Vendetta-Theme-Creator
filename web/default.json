@@ -54,5 +54,11 @@
 
     },
 
+    "background":{
+        "blur": 0,
+        "url": "",
+        "alpha": 1
+    },
+
     "spec": 2
 }
