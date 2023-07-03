@@ -55,6 +55,29 @@ function loadTheme(Theme, variantID) {
             console.error(error);
         }
     }
+
+
+    // background
+    const background = Theme.background;
+
+    document.documentElement.style.setProperty('--background-image', `url(${background.url})`);
+    document.documentElement.style.setProperty('--alpha', background.alpha);
+    document.documentElement.style.setProperty('--blur', `${background.blur}px`);
+
+    const input = document.getElementsByClassName('BACKGROUND_IMAGE')[0];
+
+    const alphaSlider = document.getElementById('alphaS');
+    const alphaValue = document.getElementById('alpha');
+
+    const blurSlider = document.getElementById('blurS');
+    const blurValue = document.getElementById('blur');
+
+    input.value = background.url;
+    alphaSlider.value = background.alpha*100;
+    alphaValue.value = background.alpha*100;
+    blurSlider.value = background.blur;
+    blurValue.value = background.blur;
+
     dispatchEvent(ThemeLoad);
 }
 
@@ -139,22 +162,62 @@ function previewInit() {
 }
 
 
+function initBackgroundImage() {
+    const input = document.getElementsByClassName('BACKGROUND_IMAGE')[0];
+    const preview = document.getElementById('middle');
 
-function copyToClipboard() {
+    const alphaSlider = document.getElementById('alphaS');
+    const alphaValue = document.getElementById('alpha');
+
+    const blurSlider = document.getElementById('blurS');
+    const blurValue = document.getElementById('blur');
+
+    input.addEventListener('input', () => {
+        loadedTheme.background.url = input.value;
+        preview.style.setProperty('--background-image', `url(${input.value})`);
+    });
+
+    alphaSlider.addEventListener('input', () => {
+        alphaValue.value = alphaSlider.value;
+        loadedTheme.background.alpha = alphaSlider.value/100;
+        preview.style.setProperty('--alpha', alphaSlider.value/100);
+    });
+
+    alphaValue.addEventListener('input', () => {
+        alphaSlider.value = alphaValue.value;
+        loadedTheme.background.alpha = alphaValue.value/100;
+        preview.style.setProperty('--alpha', alphaValue.value/100);
+    });
+
+    blurSlider.addEventListener('input', () => {
+        blurValue.value = blurSlider.value;
+        loadedTheme.background.blur = blurSlider.value;
+        preview.style.setProperty('--blur', `${blurSlider.value}px`);
+    });
+
+    blurValue.addEventListener('input', () => {
+        blurSlider.value = blurValue.value;
+        loadedTheme.background.blur = blurValue.value;
+        preview.style.setProperty('--blur', `${blurValue.value}px`);
+    });
+}
+
+function exportTheme() {
     loadedTheme.name = document.getElementById('themeName').value;
     loadedTheme.description = document.getElementById('themeDescription').value;
     loadedTheme.authors.push({"name":`${document.getElementById('themeAuthorName').value}`, "id":`${document.getElementById('themeAuthorID').value}}`})
     const file = JSON.stringify(loadedTheme)
 
+    return file
+}
+
+function copyToClipboard() {
+    file =  exportTheme()
     navigator.clipboard.writeText(file)
 }
 
 function download() {
-    loadedTheme.name = document.getElementById('themeName').value;
-    loadedTheme.description = document.getElementById('themeDescription').value;
-    loadedTheme.authors.push({"name":`${document.getElementById('themeAuthorName').value}`, "id":`${document.getElementById('themeAuthorID').value}}`})
-    const file = JSON.stringify(loadedTheme)
-
+    file = exportTheme()
     const blob = new Blob([file], {type: "text/plain"});
     const url = URL.createObjectURL(blob);
 
@@ -210,8 +273,6 @@ function dragLeaveHandler(ev) {
     dropZone.style.backgroundColor = '';
     dropZone.style.border = '';
 }
-
-
 
 // window.addEventListener("beforeunload", function (e) {
 //     e.preventDefault();

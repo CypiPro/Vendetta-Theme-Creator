@@ -203,6 +203,15 @@
             <input type="text" class="SPOILER_HIDDEN_BACKGROUND" value="#aaeeff">
         </fieldset>
 
+        <fieldset id="image">
+            <legend onclick="goto('description BACKGROUND_IMAGE')" id="BACKGROUND_IMAGE">Background Image</legend>
+            <input type="url" class="BACKGROUND_IMAGE" placeholder="Img url" id="url">
+            <input type="range" id="alphaS" value="100">
+            <input type="text" id="alpha" value="100"> <br>
+            <input type="range" id="blurS" value="0">
+            <input type="text" id="blur" value="0">
+        </fieldset>
+
 
         <button onclick="openPopup()" id="export">Export</button>
         <br>
@@ -468,6 +477,11 @@
             <h2>Spoiler Hidden Background</h2>
             <p>Themes the hidden spoiler background</p>
         </section><hr>
+
+        <section id="description BACKGROUND_IMAGE" onclick="goto('BACKGROUND_IMAGE')">
+            <h2>Background Image</h2>
+            <p>Themes the background image</p>
+        </section>
     </article>
 
     <div class="popup" id="popup">
@@ -496,7 +510,9 @@
 
     <script>
         loadFromFile("https://cypipro.github.io/Vendetta-Theme-Creator/web/default.json", 0)
+        // loadFromFile("default.json", 0)
         previewInit();
+        initBackgroundImage();
     </script>
 </body>
 </html>
